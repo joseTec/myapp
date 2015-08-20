@@ -1,0 +1,21 @@
+<ion-view view-title="Días">
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="item item-divider">Día {{chats[0].dt * 1000 | date:"fullDate"}}</div>
+      <div class="item item-body">
+        <div>
+
+
+         <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" href="#/tab/chats/{{chat.dt}}">
+        <img ng-src="http://openweathermap.org/img/w/{{chats[0].weather[0].icon}}.png">
+        <h2>{{chats[0].temp.min}}</h2>
+        <p>{{chats[0].temp.day}}°</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+          
